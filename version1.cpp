@@ -28,21 +28,28 @@ int main()
 		cout << "Please enter the number of dealerships with this color " << endl;
 		cin >> totalDealers;
 
-		while (counter < totalDealers)
+		for (colorQty = 0; counter < totalDealers; counter++)
 		{
+			
 			cout << "please enter the qty of " << color1 << " at this dealer and hit enter " << endl;
 			cin >> colorQty;
 			total = total + colorQty;
-			colorQty = 0;
-			counter++;
+		
 		}
 
 		cout << "The total # of " << color1 << " counted is: " << total << endl;
 		counter = 0;
 		colorQty = 0;
+		total = 0; 
 
 		cout << "Do you have more to calculate? Type y to continue or # to stop program" << endl;
 		cin >> return1;
+		if (return1 != 'Y'|| return1 != '#')
+		{
+			cout << "Invalid Entry!\n"; 
+			cout << "Do you have more to calculate? Type y to continue or # to stop program" << endl;
+			cin >> return1;
+		}
 		
 		
 	}
